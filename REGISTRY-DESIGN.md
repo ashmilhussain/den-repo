@@ -504,7 +504,7 @@ jobs:
 DenPaq fetches from the registry via raw GitHub URLs:
 
 ```
-Settings -> Registry URL: https://raw.githubusercontent.com/user/denpaq-registry/main
+Settings -> Registry URL: https://raw.githubusercontent.com/ashmilhussain/den-repo/main
 ```
 
 1. Fetch `registry.json` -> get the index of all tools/skills/profiles

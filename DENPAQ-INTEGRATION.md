@@ -2,7 +2,7 @@
 
 Step-by-step guide for modifying the DenPaq application to dynamically fetch, cache, and execute tools/skills/profiles from this public registry.
 
-> **Registry URL:** `https://raw.githubusercontent.com/{user}/DenRegistery/main`
+> **Registry URL:** `https://raw.githubusercontent.com/ashmilhussain/den-repo/main`
 
 ---
 
@@ -136,7 +136,7 @@ export interface AgentSkill {
 /** Add to Settings */
 export interface Settings {
   // ... existing fields ...
-  registryUrl: string;                 // Default: "https://raw.githubusercontent.com/{user}/DenRegistery/main"
+  registryUrl: string;                 // Default: "https://raw.githubusercontent.com/ashmilhussain/den-repo/main"
 }
 ```
 
@@ -363,7 +363,7 @@ Add `registryUrl` to the Settings interface default and save/load logic:
 ```typescript
 const DEFAULT_SETTINGS: Settings = {
   // ... existing defaults ...
-  registryUrl: "https://raw.githubusercontent.com/{user}/DenRegistery/main",
+  registryUrl: "https://raw.githubusercontent.com/ashmilhussain/den-repo/main",
 };
 ```
 
