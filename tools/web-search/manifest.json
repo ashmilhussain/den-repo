@@ -1,0 +1,49 @@
+{
+  "id": "web-search",
+  "name": "Web Search",
+  "description": "Search the internet for current information, news, documentation, and research. Fetch and read full webpage content. Uses DuckDuckGo — no API key required.",
+  "icon": "Globe",
+  "version": "1.0.0",
+  "author": "DenPaq",
+  "minDenpaqVersion": "0.2.0",
+  "requiresConfig": false,
+  "configFields": [],
+  "tags": ["search", "web", "research", "documentation"],
+  "approvalGated": [],
+  "tools": [
+    {
+      "name": "web_search",
+      "description": "Search the internet via DuckDuckGo for current information, news, facts, documentation, or any topic. Returns titles, URLs, and snippets of the top results. No API key required.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "The search query. Be specific for better results."
+          },
+          "count": {
+            "type": "number",
+            "description": "Number of results to return (1-10). Defaults to 5."
+          }
+        },
+        "required": ["query"]
+      }
+    },
+    {
+      "name": "web_fetch",
+      "description": "Fetch and read the full text content of a URL. Use this to read a specific webpage, article, documentation page, or any public URL. Strips HTML tags and returns readable text. Best used after web_search to read the full content of a result.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "description": "The full URL to fetch (must start with http:// or https://)."
+          }
+        },
+        "required": ["url"]
+      }
+    }
+  ],
+  "executorFile": "dist/executor.mjs",
+  "systemPromptCapability": "search the internet and fetch web pages for current information, research, and documentation via web_search / web_fetch tools"
+}

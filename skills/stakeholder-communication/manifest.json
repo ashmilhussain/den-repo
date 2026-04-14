@@ -1,0 +1,10 @@
+{
+  "id": "stakeholder-communication",
+  "name": "Stakeholder Communication",
+  "description": "Keeping stakeholders informed with the right level of detail at the right time",
+  "version": "1.0.0",
+  "author": "DenPaq",
+  "tags": ["communication", "stakeholders", "reporting", "escalation"],
+  "intentKeywords": ["stakeholder", "communication", "reporting", "escalation", "status"],
+  "instructionsFile": "instructions.md"
+}

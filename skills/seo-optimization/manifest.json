@@ -1,0 +1,10 @@
+{
+  "id": "seo-optimization",
+  "name": "SEO Optimization",
+  "description": "Search engine optimization best practices for web content and technical SEO",
+  "version": "1.0.0",
+  "author": "DenPaq",
+  "tags": ["seo", "content", "marketing", "search-engine"],
+  "intentKeywords": ["seo", "search engine", "meta tags", "keywords", "ranking", "optimization"],
+  "instructionsFile": "instructions.md"
+}

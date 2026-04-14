@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DenPaq Registry Profile Manifest",
+  "type": "object",
+  "required": ["id", "name", "role", "version", "author", "agentFile"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "name": { "type": "string" },
+    "role": { "type": "string" },
+    "avatar": { "type": "string" },
+    "color": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" },
+    "specialty": { "type": "string" },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "author": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "defaultProvider": { "type": "string" },
+    "defaultModel": { "type": "string" },
+    "defaultPersonality": { "type": "string" },
+    "builtinSkills": { "type": "array", "items": { "type": "string" } },
+    "registryTools": { "type": "array", "items": { "type": "string" } },
+    "bundledSkills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["path"],
+        "properties": {
+          "path": { "type": "string" }
+        }
+      }
+    },
+    "agentFile": { "type": "string" }
+  }
+}

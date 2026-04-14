@@ -1,0 +1,10 @@
+{
+  "id": "react-patterns",
+  "name": "React Patterns",
+  "description": "Component architecture, hooks, and state management patterns for React",
+  "version": "1.0.0",
+  "author": "DenPaq",
+  "tags": ["react", "frontend", "components", "hooks", "state-management"],
+  "intentKeywords": ["react", "component", "hooks", "useState", "useEffect", "frontend", "jsx"],
+  "instructionsFile": "instructions.md"
+}

@@ -1,0 +1,33 @@
+name: Build & Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build executor bundles
+        run: npm run build
+
+      - name: Validate registry
+        run: npm run validate
+
+      - name: Commit built executors
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "build: compile executor bundles"
+          file_pattern: "tools/*/dist/*.mjs"

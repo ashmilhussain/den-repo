@@ -1,0 +1,10 @@
+{
+  "id": "agile-scrum",
+  "name": "Agile & Scrum",
+  "description": "Agile methodology, Scrum ceremonies, sprint planning, and retrospectives",
+  "version": "1.0.0",
+  "author": "DenPaq",
+  "tags": ["agile", "scrum", "sprint", "retrospective", "standup"],
+  "intentKeywords": ["agile", "scrum", "sprint", "standup", "retrospective", "velocity", "backlog"],
+  "instructionsFile": "instructions.md"
+}

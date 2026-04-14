@@ -1,0 +1,10 @@
+{
+  "id": "api-design",
+  "name": "API Design",
+  "description": "RESTful API conventions, error handling, and response shapes",
+  "version": "1.0.0",
+  "author": "DenPaq",
+  "tags": ["api", "rest", "backend", "http", "error-handling"],
+  "intentKeywords": ["api", "rest", "endpoint", "http", "status code", "error handling"],
+  "instructionsFile": "instructions.md"
+}

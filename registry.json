@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "tools": [
+    { "id": "github", "path": "tools/github" },
+    { "id": "web-search", "path": "tools/web-search" }
+  ],
+  "skills": [
+    { "id": "project-planning", "path": "skills/project-planning" },
+    { "id": "stakeholder-communication", "path": "skills/stakeholder-communication" },
+    { "id": "react-patterns", "path": "skills/react-patterns" },
+    { "id": "api-design", "path": "skills/api-design" },
+    { "id": "seo-optimization", "path": "skills/seo-optimization" },
+    { "id": "agile-scrum", "path": "skills/agile-scrum" }
+  ],
+  "profiles": [
+    { "id": "project-manager", "path": "profiles/project-manager" },
+    { "id": "frontend-developer", "path": "profiles/frontend-developer" },
+    { "id": "backend-developer", "path": "profiles/backend-developer" },
+    { "id": "fullstack-developer", "path": "profiles/fullstack-developer" },
+    { "id": "devops-engineer", "path": "profiles/devops-engineer" },
+    { "id": "technical-writer", "path": "profiles/technical-writer" },
+    { "id": "product-manager", "path": "profiles/product-manager" },
+    { "id": "data-analyst", "path": "profiles/data-analyst" },
+    { "id": "designer", "path": "profiles/designer" }
+  ]
+}

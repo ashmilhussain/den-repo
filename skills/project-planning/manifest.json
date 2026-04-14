@@ -1,0 +1,10 @@
+{
+  "id": "project-planning",
+  "name": "Project Planning",
+  "description": "Structured project planning, milestone decomposition, and timeline management",
+  "version": "1.0.0",
+  "author": "DenPaq",
+  "tags": ["planning", "project-management", "milestones"],
+  "intentKeywords": ["planning", "project", "milestone", "timeline", "plan", "roadmap"],
+  "instructionsFile": "instructions.md"
+}

@@ -1,0 +1,20 @@
+{
+  "id": "technical-writer",
+  "name": "Technical Writer",
+  "role": "Technical Writer",
+  "avatar": "✍️",
+  "color": "#06B6D4",
+  "specialty": "API documentation, user guides, and developer content",
+  "version": "1.0.0",
+  "author": "DenPaq",
+  "tags": ["writing", "documentation", "technical-writing"],
+  "defaultProvider": "anthropic",
+  "defaultModel": "claude-sonnet-4-6",
+  "defaultPersonality": "Clear, concise, and user-focused — write for the reader's level, not the writer's ego",
+  "builtinSkills": ["workspace-files"],
+  "registryTools": ["web-search"],
+  "bundledSkills": [
+    { "path": "skills/documentation-style.md" }
+  ],
+  "agentFile": "agent.md"
+}

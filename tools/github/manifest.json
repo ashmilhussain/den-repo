@@ -1,0 +1,168 @@
+{
+  "id": "github",
+  "name": "GitHub",
+  "description": "List repos, read files, create and list issues, manage PRs on GitHub repositories.",
+  "icon": "Github",
+  "version": "1.0.0",
+  "author": "DenPaq",
+  "minDenpaqVersion": "0.2.0",
+  "requiresConfig": true,
+  "configFields": [
+    {
+      "key": "github_token",
+      "label": "Personal Access Token",
+      "type": "password",
+      "required": true,
+      "placeholder": "ghp_..."
+    }
+  ],
+  "tags": ["development", "github", "version-control"],
+  "approvalGated": [
+    "github_create_issue",
+    "github_create_pr",
+    "github_merge_pr",
+    "github_commit_file"
+  ],
+  "tools": [
+    {
+      "name": "github_list_repos",
+      "description": "List GitHub repositories for the authenticated user.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "per_page": { "type": "string", "description": "Number of repos to return (max 30)." }
+        }
+      }
+    },
+    {
+      "name": "github_list_issues",
+      "description": "List issues for a GitHub repository.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "repo": { "type": "string", "description": "Repository in owner/name format, e.g. 'octocat/Hello-World'." },
+          "state": { "type": "string", "description": "Issue state: 'open', 'closed', or 'all'.", "enum": ["open", "closed", "all"] }
+        },
+        "required": ["repo"]
+      }
+    },
+    {
+      "name": "github_create_issue",
+      "description": "Create a new issue in a GitHub repository. Requires human approval.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "repo": { "type": "string", "description": "Repository in owner/name format." },
+          "title": { "type": "string", "description": "Issue title." },
+          "body": { "type": "string", "description": "Issue body / description." },
+          "labels": { "type": "string", "description": "Comma-separated list of label names to apply." }
+        },
+        "required": ["repo", "title"]
+      }
+    },
+    {
+      "name": "github_update_issue",
+      "description": "Update an existing issue (change title, body, state, or labels).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "repo": { "type": "string", "description": "Repository in owner/name format." },
+          "issue_number": { "type": "number", "description": "The issue number to update." },
+          "title": { "type": "string", "description": "New title." },
+          "body": { "type": "string", "description": "New body text." },
+          "state": { "type": "string", "description": "Set to 'open' or 'closed'.", "enum": ["open", "closed"] },
+          "labels": { "type": "string", "description": "Comma-separated label names (replaces existing labels)." }
+        },
+        "required": ["repo", "issue_number"]
+      }
+    },
+    {
+      "name": "github_list_prs",
+      "description": "List pull requests for a GitHub repository.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "repo": { "type": "string", "description": "Repository in owner/name format." },
+          "state": { "type": "string", "description": "PR state: 'open', 'closed', or 'all'.", "enum": ["open", "closed", "all"] }
+        },
+        "required": ["repo"]
+      }
+    },
+    {
+      "name": "github_create_pr",
+      "description": "Create a pull request in a GitHub repository. Requires human approval.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "repo": { "type": "string", "description": "Repository in owner/name format." },
+          "title": { "type": "string", "description": "PR title." },
+          "body": { "type": "string", "description": "PR description." },
+          "head": { "type": "string", "description": "The branch containing the changes (e.g. 'feature/my-branch')." },
+          "base": { "type": "string", "description": "The branch to merge into (e.g. 'main')." },
+          "draft": { "type": "boolean", "description": "Create as a draft PR. Defaults to false." }
+        },
+        "required": ["repo", "title", "head", "base"]
+      }
+    },
+    {
+      "name": "github_update_pr",
+      "description": "Update an existing pull request (title, body, state, or base branch).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "repo": { "type": "string", "description": "Repository in owner/name format." },
+          "pr_number": { "type": "number", "description": "The pull request number." },
+          "title": { "type": "string", "description": "New title." },
+          "body": { "type": "string", "description": "New description." },
+          "state": { "type": "string", "description": "Set to 'open' or 'closed'.", "enum": ["open", "closed"] },
+          "base": { "type": "string", "description": "New base branch to merge into." }
+        },
+        "required": ["repo", "pr_number"]
+      }
+    },
+    {
+      "name": "github_merge_pr",
+      "description": "Merge an open pull request. Requires human approval.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "repo": { "type": "string", "description": "Repository in owner/name format." },
+          "pr_number": { "type": "number", "description": "The pull request number to merge." },
+          "commit_title": { "type": "string", "description": "Title for the merge commit (optional)." },
+          "merge_method": { "type": "string", "description": "How to merge: 'merge', 'squash', or 'rebase'. Defaults to 'merge'.", "enum": ["merge", "squash", "rebase"] }
+        },
+        "required": ["repo", "pr_number"]
+      }
+    },
+    {
+      "name": "github_get_file",
+      "description": "Get the text content of a file from a GitHub repository.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "repo": { "type": "string", "description": "Repository in owner/name format." },
+          "path": { "type": "string", "description": "File path in the repository." },
+          "ref": { "type": "string", "description": "Branch, tag, or commit SHA. Defaults to default branch." }
+        },
+        "required": ["repo", "path"]
+      }
+    },
+    {
+      "name": "github_commit_file",
+      "description": "Create or update a single file in a GitHub repository (commits directly to the branch). Requires human approval.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "repo": { "type": "string", "description": "Repository in owner/name format." },
+          "path": { "type": "string", "description": "File path inside the repo (e.g. 'src/index.ts')." },
+          "content": { "type": "string", "description": "Full text content to write to the file." },
+          "message": { "type": "string", "description": "Commit message." },
+          "branch": { "type": "string", "description": "Branch to commit to. Defaults to the default branch." }
+        },
+        "required": ["repo", "path", "content", "message"]
+      }
+    }
+  ],
+  "executorFile": "dist/executor.mjs",
+  "systemPromptCapability": "interact with GitHub: list repos, manage issues and PRs, read and commit files via github_* tools"
+}

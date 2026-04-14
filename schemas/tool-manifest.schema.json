@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DenPaq Registry Tool Manifest",
+  "type": "object",
+  "required": ["id", "name", "description", "version", "author", "tools", "executorFile"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "name": { "type": "string" },
+    "description": { "type": "string" },
+    "icon": { "type": "string" },
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "author": { "type": "string" },
+    "minDenpaqVersion": { "type": "string" },
+    "requiresConfig": { "type": "boolean" },
+    "configFields": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["key", "label", "type", "required"],
+        "properties": {
+          "key": { "type": "string" },
+          "label": { "type": "string" },
+          "type": { "type": "string", "enum": ["text", "password"] },
+          "required": { "type": "boolean" },
+          "placeholder": { "type": "string" }
+        }
+      }
+    },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "approvalGated": { "type": "array", "items": { "type": "string" } },
+    "tools": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "description", "parameters"],
+        "properties": {
+          "name": { "type": "string" },
+          "description": { "type": "string" },
+          "parameters": {
+            "type": "object",
+            "required": ["type", "properties"],
+            "properties": {
+              "type": { "type": "string", "const": "object" },
+              "properties": { "type": "object" },
+              "required": { "type": "array", "items": { "type": "string" } }
+            }
+          }
+        }
+      }
+    },
+    "executorFile": { "type": "string" },
+    "systemPromptCapability": { "type": "string" }
+  }
+}

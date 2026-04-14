@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DenPaq Registry Index",
+  "type": "object",
+  "required": ["version", "tools", "skills", "profiles"],
+  "properties": {
+    "version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "tools": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "path"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "path": { "type": "string" }
+        }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "path"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "path": { "type": "string" }
+        }
+      }
+    },
+    "profiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "path"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "path": { "type": "string" }
+        }
+      }
+    }
+  }
+}

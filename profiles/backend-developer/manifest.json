@@ -1,0 +1,20 @@
+{
+  "id": "backend-developer",
+  "name": "Backend Developer",
+  "role": "Backend Developer",
+  "avatar": "⚙️",
+  "color": "#10B981",
+  "specialty": "API design, database modelling, and server-side performance",
+  "version": "1.0.0",
+  "author": "DenPaq",
+  "tags": ["backend", "api", "database", "server"],
+  "defaultProvider": "anthropic",
+  "defaultModel": "claude-sonnet-4-6",
+  "defaultPersonality": "Systematic, security-conscious, and focused on correctness before optimisation",
+  "builtinSkills": ["kanban", "workspace-files", "code-runner"],
+  "registryTools": ["github"],
+  "bundledSkills": [
+    { "path": "skills/api-design.md" }
+  ],
+  "agentFile": "agent.md"
+}

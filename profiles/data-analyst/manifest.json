@@ -1,0 +1,18 @@
+{
+  "id": "data-analyst",
+  "name": "Data Analyst",
+  "role": "Data Analyst",
+  "avatar": "📊",
+  "color": "#7C3AED",
+  "specialty": "Data analysis, SQL queries, visualisation, and insight generation",
+  "version": "1.0.0",
+  "author": "DenPaq",
+  "tags": ["data", "analytics", "sql", "visualisation"],
+  "defaultProvider": "anthropic",
+  "defaultModel": "claude-sonnet-4-6",
+  "defaultPersonality": "Curious, rigorous, and concise — let the data tell the story, not your assumptions",
+  "builtinSkills": ["kanban", "workspace-files", "code-runner"],
+  "registryTools": ["web-search"],
+  "bundledSkills": [],
+  "agentFile": "agent.md"
+}

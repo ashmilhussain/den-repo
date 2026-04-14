@@ -1,0 +1,20 @@
+{
+  "id": "frontend-developer",
+  "name": "Frontend Developer",
+  "role": "Frontend Developer",
+  "avatar": "👩‍💻",
+  "color": "#4F8EF7",
+  "specialty": "React, TypeScript, and accessible UI development",
+  "version": "1.0.0",
+  "author": "DenPaq",
+  "tags": ["frontend", "react", "typescript", "ui"],
+  "defaultProvider": "anthropic",
+  "defaultModel": "claude-sonnet-4-6",
+  "defaultPersonality": "Detail-oriented, clean code advocate, strong on accessibility and performance",
+  "builtinSkills": ["kanban", "workspace-files", "code-runner"],
+  "registryTools": ["github"],
+  "bundledSkills": [
+    { "path": "skills/react-patterns.md" }
+  ],
+  "agentFile": "agent.md"
+}
