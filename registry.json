@@ -21,6 +21,7 @@
     { "id": "technical-writer", "path": "profiles/technical-writer" },
     { "id": "product-manager", "path": "profiles/product-manager" },
     { "id": "data-analyst", "path": "profiles/data-analyst" },
-    { "id": "designer", "path": "profiles/designer" }
+    { "id": "designer", "path": "profiles/designer" },
+    { "id": "seo-analyst", "path": "profiles/seo-analyst" }
   ]
 }
