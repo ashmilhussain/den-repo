@@ -1,0 +1,154 @@
+{
+  "id": "notion",
+  "name": "Notion",
+  "description": "Search, create, and update Notion pages and databases. Manage workspace content, query databases with filters, and append rich content blocks.",
+  "icon": "BookOpen",
+  "version": "1.0.0",
+  "author": "DenPaq",
+  "minDenpaqVersion": "0.2.0",
+  "requiresConfig": true,
+  "configFields": [
+    {
+      "key": "notion_token",
+      "label": "Internal Integration Token",
+      "type": "password",
+      "required": true,
+      "placeholder": "ntn_..."
+    }
+  ],
+  "tags": ["productivity", "notion", "knowledge-base", "wiki", "database"],
+  "approvalGated": [
+    "notion_create_page",
+    "notion_archive_page",
+    "notion_create_database_item"
+  ],
+  "tools": [
+    {
+      "name": "notion_search",
+      "description": "Search for pages and databases in the Notion workspace by title. Returns matching pages and databases the integration has access to.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": { "type": "string", "description": "Search query to match against page and database titles." },
+          "filter_type": { "type": "string", "description": "Filter results by type: 'page' or 'database'. Omit for both.", "enum": ["page", "database"] },
+          "page_size": { "type": "number", "description": "Number of results to return (max 100). Defaults to 10." }
+        },
+        "required": ["query"]
+      }
+    },
+    {
+      "name": "notion_get_page",
+      "description": "Get a Notion page's properties and content blocks. Returns the page title, properties, and child blocks (text, headings, lists, etc.).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "page_id": { "type": "string", "description": "The Notion page ID (UUID format, with or without dashes)." }
+        },
+        "required": ["page_id"]
+      }
+    },
+    {
+      "name": "notion_create_page",
+      "description": "Create a new page in Notion. Can be a child of another page or a new item in a database. Requires human approval.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "parent_id": { "type": "string", "description": "Parent page ID or database ID where the new page will be created." },
+          "parent_type": { "type": "string", "description": "Type of parent: 'page_id' or 'database_id'.", "enum": ["page_id", "database_id"] },
+          "title": { "type": "string", "description": "Page title." },
+          "properties": { "type": "string", "description": "JSON string of database properties to set (only for database parents). Example: {\"Status\": {\"select\": {\"name\": \"In Progress\"}}}" },
+          "content": { "type": "string", "description": "Markdown-like content for the page body. Supports headings (## H2), bullets (- item), numbered lists (1. item), bold (**text**), italic (*text*), code (`code`), and plain paragraphs." }
+        },
+        "required": ["parent_id", "parent_type", "title"]
+      }
+    },
+    {
+      "name": "notion_update_page",
+      "description": "Update a Notion page's properties (title, status, tags, etc.). Does not modify page content blocks — use notion_append_blocks for that.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "page_id": { "type": "string", "description": "The Notion page ID to update." },
+          "properties": { "type": "string", "description": "JSON string of properties to update. Example: {\"Status\": {\"select\": {\"name\": \"Done\"}}, \"Priority\": {\"select\": {\"name\": \"High\"}}}" }
+        },
+        "required": ["page_id", "properties"]
+      }
+    },
+    {
+      "name": "notion_archive_page",
+      "description": "Archive (soft-delete) a Notion page. The page can be restored from trash. Requires human approval.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "page_id": { "type": "string", "description": "The Notion page ID to archive." }
+        },
+        "required": ["page_id"]
+      }
+    },
+    {
+      "name": "notion_get_database",
+      "description": "Get a Notion database's schema — its title, description, and property definitions (columns). Useful for understanding the structure before querying or creating items.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "database_id": { "type": "string", "description": "The Notion database ID." }
+        },
+        "required": ["database_id"]
+      }
+    },
+    {
+      "name": "notion_query_database",
+      "description": "Query a Notion database with optional filters and sorts. Returns matching rows (pages) with their properties.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "database_id": { "type": "string", "description": "The Notion database ID to query." },
+          "filter": { "type": "string", "description": "JSON string of Notion filter object. Example: {\"property\": \"Status\", \"select\": {\"equals\": \"In Progress\"}}" },
+          "sorts": { "type": "string", "description": "JSON string of sorts array. Example: [{\"property\": \"Created\", \"direction\": \"descending\"}]" },
+          "page_size": { "type": "number", "description": "Number of results (max 100). Defaults to 20." }
+        },
+        "required": ["database_id"]
+      }
+    },
+    {
+      "name": "notion_create_database_item",
+      "description": "Create a new item (row) in a Notion database with specified properties. Requires human approval.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "database_id": { "type": "string", "description": "The Notion database ID." },
+          "title": { "type": "string", "description": "Title for the new item (value for the title property)." },
+          "properties": { "type": "string", "description": "JSON string of additional properties. Example: {\"Status\": {\"select\": {\"name\": \"To Do\"}}, \"Assignee\": {\"people\": [{\"id\": \"user-id\"}]}}" },
+          "content": { "type": "string", "description": "Optional page body content in markdown-like format." }
+        },
+        "required": ["database_id", "title"]
+      }
+    },
+    {
+      "name": "notion_update_database_item",
+      "description": "Update an existing database item's properties (status, tags, dates, etc.).",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "page_id": { "type": "string", "description": "The page ID of the database item to update." },
+          "properties": { "type": "string", "description": "JSON string of properties to update. Example: {\"Status\": {\"select\": {\"name\": \"Done\"}}}" }
+        },
+        "required": ["page_id", "properties"]
+      }
+    },
+    {
+      "name": "notion_append_blocks",
+      "description": "Append content blocks to an existing Notion page. Use this to add text, headings, lists, code blocks, and other content to a page.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "page_id": { "type": "string", "description": "The Notion page ID to append content to." },
+          "content": { "type": "string", "description": "Markdown-like content to append. Supports headings (## H2), bullets (- item), numbered lists (1. item), bold (**text**), italic (*text*), code blocks (```code```), dividers (---), and plain paragraphs." }
+        },
+        "required": ["page_id", "content"]
+      }
+    }
+  ],
+  "executorFile": "dist/executor.mjs",
+  "systemPromptCapability": "interact with Notion: search pages, create and update pages, query and manage databases, append content blocks via notion_* tools"
+}

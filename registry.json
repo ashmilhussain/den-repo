@@ -2,7 +2,8 @@
   "version": "1.0.0",
   "tools": [
     { "id": "github", "path": "tools/github" },
-    { "id": "web-search", "path": "tools/web-search" }
+    { "id": "web-search", "path": "tools/web-search" },
+    { "id": "notion", "path": "tools/notion" }
   ],
   "skills": [
     { "id": "project-planning", "path": "skills/project-planning" },
@@ -14,7 +15,8 @@
     { "id": "infrastructure", "path": "skills/infrastructure" },
     { "id": "product-planning", "path": "skills/product-planning" },
     { "id": "documentation-style", "path": "skills/documentation-style" },
-    { "id": "seo-strategy", "path": "skills/seo-strategy" }
+    { "id": "seo-strategy", "path": "skills/seo-strategy" },
+    { "id": "notion-management", "path": "skills/notion-management" }
   ],
   "profiles": [
     { "id": "project-manager", "path": "profiles/project-manager" },

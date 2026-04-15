@@ -1,0 +1,10 @@
+{
+  "id": "notion-management",
+  "name": "Notion Management",
+  "description": "Best practices for organising Notion workspaces, designing databases, structuring pages, and managing content",
+  "version": "1.0.0",
+  "author": "DenPaq",
+  "tags": ["notion", "productivity", "knowledge-management", "databases", "wiki"],
+  "intentKeywords": ["notion", "workspace", "database", "wiki", "knowledge base", "page", "template"],
+  "instructionsFile": "instructions.md"
+}
