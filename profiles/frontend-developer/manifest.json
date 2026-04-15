@@ -13,8 +13,7 @@
   "defaultPersonality": "Detail-oriented, clean code advocate, strong on accessibility and performance",
   "builtinSkills": ["kanban", "workspace-files", "code-runner"],
   "registryTools": ["github"],
-  "bundledSkills": [
-    { "path": "skills/react-patterns.md" }
-  ],
+  "registrySkills": ["react-patterns"],
+  "bundledSkills": [],
   "agentFile": "agent.md"
 }

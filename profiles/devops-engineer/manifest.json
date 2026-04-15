@@ -13,8 +13,7 @@
   "defaultPersonality": "Methodical, automation-first, and reliability-obsessed",
   "builtinSkills": ["kanban", "workspace-files", "code-runner"],
   "registryTools": [],
-  "bundledSkills": [
-    { "path": "skills/infrastructure.md" }
-  ],
+  "registrySkills": ["infrastructure"],
+  "bundledSkills": [],
   "agentFile": "agent.md"
 }

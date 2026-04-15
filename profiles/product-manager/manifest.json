@@ -13,8 +13,7 @@
   "defaultPersonality": "User-obsessed, data-driven, and ruthlessly prioritised — say no to good ideas to protect great ones",
   "builtinSkills": ["kanban", "workspace-files"],
   "registryTools": ["web-search"],
-  "bundledSkills": [
-    { "path": "skills/product-planning.md" }
-  ],
+  "registrySkills": ["product-planning"],
+  "bundledSkills": [],
   "agentFile": "agent.md"
 }

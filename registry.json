@@ -10,7 +10,11 @@
     { "id": "react-patterns", "path": "skills/react-patterns" },
     { "id": "api-design", "path": "skills/api-design" },
     { "id": "seo-optimization", "path": "skills/seo-optimization" },
-    { "id": "agile-scrum", "path": "skills/agile-scrum" }
+    { "id": "agile-scrum", "path": "skills/agile-scrum" },
+    { "id": "infrastructure", "path": "skills/infrastructure" },
+    { "id": "product-planning", "path": "skills/product-planning" },
+    { "id": "documentation-style", "path": "skills/documentation-style" },
+    { "id": "seo-strategy", "path": "skills/seo-strategy" }
   ],
   "profiles": [
     { "id": "project-manager", "path": "profiles/project-manager" },

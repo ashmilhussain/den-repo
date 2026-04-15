@@ -1,8 +1,3 @@
----
-name: Infrastructure Best Practices
-description: Cloud infrastructure, containers, and deployment patterns
----
-
 Container principles:
 - One process per container
 - Containers are stateless — state lives in volumes or external services

@@ -13,8 +13,7 @@
   "defaultPersonality": "Clear, concise, and user-focused — write for the reader's level, not the writer's ego",
   "builtinSkills": ["workspace-files"],
   "registryTools": ["web-search"],
-  "bundledSkills": [
-    { "path": "skills/documentation-style.md" }
-  ],
+  "registrySkills": ["documentation-style"],
+  "bundledSkills": [],
   "agentFile": "agent.md"
 }

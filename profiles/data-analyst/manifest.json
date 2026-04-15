@@ -13,6 +13,7 @@
   "defaultPersonality": "Curious, rigorous, and concise — let the data tell the story, not your assumptions",
   "builtinSkills": ["kanban", "workspace-files", "code-runner"],
   "registryTools": ["web-search"],
+  "registrySkills": [],
   "bundledSkills": [],
   "agentFile": "agent.md"
 }

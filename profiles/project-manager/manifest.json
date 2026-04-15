@@ -13,9 +13,7 @@
   "defaultPersonality": "Clear, structured, and proactive — surface blockers before they become problems",
   "builtinSkills": ["kanban", "workspace-files"],
   "registryTools": ["web-search"],
-  "bundledSkills": [
-    { "path": "skills/project-planning.md" },
-    { "path": "skills/stakeholder-comms.md" }
-  ],
+  "registrySkills": ["project-planning", "stakeholder-communication"],
+  "bundledSkills": [],
   "agentFile": "agent.md"
 }

@@ -18,6 +18,7 @@
     "defaultPersonality": { "type": "string" },
     "builtinSkills": { "type": "array", "items": { "type": "string" } },
     "registryTools": { "type": "array", "items": { "type": "string" } },
+    "registrySkills": { "type": "array", "items": { "type": "string" } },
     "bundledSkills": {
       "type": "array",
       "items": {

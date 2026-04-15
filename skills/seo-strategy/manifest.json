@@ -1,0 +1,10 @@
+{
+  "id": "seo-strategy",
+  "name": "SEO Strategy",
+  "description": "Search engine optimization strategy, keyword research methodology, and technical SEO best practices",
+  "version": "1.0.0",
+  "author": "DenPaq",
+  "tags": ["seo", "search", "keywords", "content-strategy", "technical-seo"],
+  "intentKeywords": ["seo", "keyword", "search engine", "ranking", "backlink", "content strategy"],
+  "instructionsFile": "instructions.md"
+}

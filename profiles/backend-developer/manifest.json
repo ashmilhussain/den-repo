@@ -13,8 +13,7 @@
   "defaultPersonality": "Systematic, security-conscious, and focused on correctness before optimisation",
   "builtinSkills": ["kanban", "workspace-files", "code-runner"],
   "registryTools": ["github"],
-  "bundledSkills": [
-    { "path": "skills/api-design.md" }
-  ],
+  "registrySkills": ["api-design"],
+  "bundledSkills": [],
   "agentFile": "agent.md"
 }

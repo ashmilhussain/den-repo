@@ -13,6 +13,7 @@
   "defaultPersonality": "Empathetic, detail-obsessed, and user-first — every pixel has a purpose",
   "builtinSkills": ["kanban", "workspace-files"],
   "registryTools": ["web-search"],
+  "registrySkills": [],
   "bundledSkills": [],
   "agentFile": "agent.md"
 }

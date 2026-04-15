@@ -1,8 +1,3 @@
----
-name: Product Planning
-description: Roadmap building, prioritisation, and feature specification
----
-
 Roadmap principles:
 - Outcomes not outputs — "Reduce onboarding drop-off by 20%" not "Build onboarding wizard"
 - Now / Next / Later — three horizons, not a 12-month Gantt chart

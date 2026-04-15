@@ -1,0 +1,10 @@
+{
+  "id": "product-planning",
+  "name": "Product Planning",
+  "description": "Roadmap building, prioritisation, and feature specification",
+  "version": "1.0.0",
+  "author": "DenPaq",
+  "tags": ["product", "roadmap", "prioritisation", "prd"],
+  "intentKeywords": ["roadmap", "product", "prioritise", "prd", "discovery", "feature"],
+  "instructionsFile": "instructions.md"
+}

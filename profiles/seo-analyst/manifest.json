@@ -13,8 +13,7 @@
   "defaultPersonality": "Analytical, data-driven, and strategic — optimize for users first, search engines second",
   "builtinSkills": ["kanban", "workspace-files"],
   "registryTools": ["web-search"],
-  "bundledSkills": [
-    { "path": "skills/seo-strategy.md" }
-  ],
+  "registrySkills": ["seo-strategy"],
+  "bundledSkills": [],
   "agentFile": "agent.md"
 }

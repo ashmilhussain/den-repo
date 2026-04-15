@@ -1,8 +1,3 @@
----
-name: SEO Strategy
-description: Search engine optimization strategy, keyword research methodology, and technical SEO best practices
----
-
 ## On-page SEO standards
 
 - Every page has a unique, descriptive `<title>` tag (50-60 characters, primary keyword front-loaded)

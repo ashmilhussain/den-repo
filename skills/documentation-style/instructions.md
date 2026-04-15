@@ -1,8 +1,3 @@
----
-name: Documentation Style Guide
-description: Voice, tone, and formatting standards for all documentation
----
-
 Voice and tone:
 - Active voice: "Click Save" not "Save should be clicked"
 - Second person: "You can" not "The user can"

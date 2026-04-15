@@ -1,0 +1,10 @@
+{
+  "id": "infrastructure",
+  "name": "Infrastructure Best Practices",
+  "description": "Cloud infrastructure, containers, and deployment patterns",
+  "version": "1.0.0",
+  "author": "DenPaq",
+  "tags": ["devops", "infrastructure", "containers", "ci-cd", "deployment"],
+  "intentKeywords": ["infrastructure", "container", "docker", "ci", "cd", "pipeline", "deploy"],
+  "instructionsFile": "instructions.md"
+}

@@ -1,0 +1,10 @@
+{
+  "id": "documentation-style",
+  "name": "Documentation Style Guide",
+  "description": "Voice, tone, and formatting standards for all documentation",
+  "version": "1.0.0",
+  "author": "DenPaq",
+  "tags": ["writing", "documentation", "style-guide", "tone"],
+  "intentKeywords": ["documentation", "style", "tone", "voice", "formatting", "writing"],
+  "instructionsFile": "instructions.md"
+}
