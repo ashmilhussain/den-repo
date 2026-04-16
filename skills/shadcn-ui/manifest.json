@@ -1,0 +1,10 @@
+{
+  "id": "shadcn-ui",
+  "name": "shadcn/ui",
+  "description": "shadcn/ui component patterns, installation, forms, theming, and accessible UI composition",
+  "version": "1.0.0",
+  "author": "DenPaq",
+  "tags": ["shadcn", "ui", "components", "radix", "forms", "accessibility", "react"],
+  "intentKeywords": ["shadcn", "shadcn-ui", "radix", "ui components", "dialog", "form", "card", "button", "toast", "data table", "sheet"],
+  "instructionsFile": "instructions.md"
+}

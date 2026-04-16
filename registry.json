@@ -16,7 +16,9 @@
     { "id": "product-planning", "path": "skills/product-planning" },
     { "id": "documentation-style", "path": "skills/documentation-style" },
     { "id": "seo-strategy", "path": "skills/seo-strategy" },
-    { "id": "notion-management", "path": "skills/notion-management" }
+    { "id": "notion-management", "path": "skills/notion-management" },
+    { "id": "tailwind-css", "path": "skills/tailwind-css" },
+    { "id": "shadcn-ui", "path": "skills/shadcn-ui" }
   ],
   "profiles": [
     { "id": "project-manager", "path": "profiles/project-manager" },
