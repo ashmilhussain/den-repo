@@ -1,0 +1,10 @@
+{
+  "id": "tailwind-css",
+  "name": "Tailwind CSS",
+  "description": "Tailwind CSS best practices, design tokens, utility patterns, and v4 migration guide",
+  "version": "1.0.0",
+  "author": "DenPaq",
+  "tags": ["tailwind", "css", "styling", "design-tokens", "responsive", "dark-mode"],
+  "intentKeywords": ["tailwind", "tailwindcss", "css", "styling", "utility classes", "design tokens", "responsive", "dark mode", "theme"],
+  "instructionsFile": "instructions.md"
+}

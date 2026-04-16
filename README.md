@@ -9,7 +9,7 @@ Central library of tools, skills, and agent profiles for DenPaq.
 | Category | Count | Description |
 |----------|:-----:|-------------|
 | **Tools** | 3 | External integrations with executable code (GitHub, Web Search, Notion) |
-| **Skills** | 11 | Instruction sets injected into agent system prompts |
+| **Skills** | 13 | Instruction sets injected into agent system prompts |
 | **Profiles** | 10 | Pre-configured agent templates with roles, personalities, and skill bundles |
 
 ## Registry structure
@@ -67,6 +67,8 @@ Skills are **instruction-only** — no executable code. They provide domain know
 | [documentation-style](skills/documentation-style/) | Voice, tone, formatting standards |
 | [seo-strategy](skills/seo-strategy/) | Keyword research, content strategy, competitor analysis |
 | [notion-management](skills/notion-management/) | Workspace organisation, database design patterns |
+| [tailwind-css](skills/tailwind-css/) | Utility-first styling, design tokens, responsive design, v4 migration |
+| [shadcn-ui](skills/shadcn-ui/) | Component patterns, CLI usage, forms, theming, accessible UI |
 
 ## Profiles
 
